@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Random color example — event handler property</title>
+    <style>
+      .btn-lg{
+        padding: 20px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <button type="button" class="btn btn-primary btn-lg btn-block"> Click me! To Change Color </button>
+
+    <script src="main.js"></script>
+    <script>
+      var btn = document.querySelector('button');
+      
+      /* Function for getting random numbers */
+      function random(number) {
+        return Math.floor(Math.random()*number);
+      }
+
+
+      /* bgChange function to style background color of webpage*/
+      function bgChange() {
+        var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        document.body.style.backgroundColor = randomColor;
+      }
+
+
+      /* assigned Event to bgChange function */
+      btn.onclick = bgChange;    
+    
+    </script>
+  </body>
+</html>
